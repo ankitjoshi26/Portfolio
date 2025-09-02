@@ -136,3 +136,100 @@
   margin-right: 3rem;
   background-repeat: no-repeat;
 }
+
+
+
+
+
+/* RESPONSIVE STYLING */
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        margin-top: 5rem;
+    }
+
+    .hero-img {
+        margin: 2rem 0;
+        width: 250px;
+        height: 250px;
+        background-size: cover;
+    }
+
+    #nav-list {
+        margin-right: 2rem;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        height: 4.5rem;
+        flex-direction: column;
+        padding: 0.5rem 0;
+    }
+
+    #logo {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    #nav-list {
+        margin-right: 0;
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .resume {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
+
+    .hero-img {
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    #nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .hero-img {
+        width: 150px;
+        height: 150px;
+        background-size: cover;
+        margin-right: 0;
+    }
+}
