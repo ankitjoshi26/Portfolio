@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+ /* NAVBAR  */
 #navbar {
     background-color: #0f172a;
     color: white;
@@ -19,15 +21,15 @@
     top: 0;
     left: 0;
     z-index: 999;
+    flex-wrap: nowrap; 
 }
-
 
 #logo {
     margin-left: 3rem;
     font-size: 1.4rem;
-    /* font-weight: bold; */
     line-height: 0.6;
     font-family: "Roboto", sans-serif;
+    flex-shrink: 0; 
 }
 #logo span {
     display: block;
@@ -45,6 +47,8 @@
     cursor: pointer;
     font-size: 1rem;
     font-family: "Roboto", sans-serif;
+    flex-shrink: 1; 
+    flex-wrap: nowrap; 
 }
 
 #nav-list a {
@@ -59,7 +63,7 @@
     color: white;
 }
 
-
+/* HERO SECTION  */
 .hero{
     width: 100vw;
     height: 100vh;
@@ -74,7 +78,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: red; */
     margin-top: 2rem;
     font-family: "Vend Sans", sans-serif;
     padding: 1rem;
@@ -104,7 +107,6 @@
   color: #cbd5e1;
 }
 
-
 .resume {
   padding: 12px 24px;
   border-radius: 8px;
@@ -123,6 +125,7 @@
   color: #06b6d4;
   transform: translateY(-3px);
 }
+
 .hero-img {
   display: flex;
   justify-content: center;
@@ -132,16 +135,12 @@
   box-shadow: 0 0 30px rgba(6, 182, 212, 0.3);
   background-image: url("../Images/me.jpg");
   background-size: 120%;
-  background-position:top;
+  background-position: top;
   margin-right: 3rem;
   background-repeat: no-repeat;
 }
 
-
-
-
-
-/* RESPONSIVE STYLING */
+ /* RESPONSIVE  */
 @media (max-width: 1024px) {
     .hero-container {
         flex-direction: column-reverse;
@@ -158,29 +157,26 @@
     }
 
     #nav-list {
-        margin-right: 2rem;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
+        margin-right: 0;
+        gap: 25px;
     }
-}
 
-@media (max-width: 768px) {
     #navbar {
-        height: 4.5rem;
-        flex-direction: column;
-        padding: 0.5rem 0;
+        padding: 0 2rem;
     }
 
     #logo {
         margin-left: 0;
-        margin-bottom: 0.5rem;
     }
 
+    #nav-list a {
+        font-size: 0.95rem; 
+    }
+}
+
+@media (max-width: 768px) {
     #nav-list {
-        margin-right: 0;
-        gap: 15px;
-        font-size: 0.9rem;
+        gap: 20px;
     }
 
     .hero-text h1 {
@@ -206,12 +202,15 @@
         height: 200px;
         background-size: cover;
     }
+
+    #nav-list a {
+        font-size: 0.85rem; 
+    }
 }
 
 @media (max-width: 480px) {
     #nav-list {
-        flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
 
     .hero-text h1 {
@@ -231,5 +230,9 @@
         height: 150px;
         background-size: cover;
         margin-right: 0;
+    }
+
+    #nav-list a {
+        font-size: 0.75rem;
     }
 }
