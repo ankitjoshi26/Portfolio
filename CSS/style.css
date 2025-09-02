@@ -130,7 +130,7 @@
   width: 300px;
   border-radius: 50%;
   box-shadow: 0 0 30px rgba(6, 182, 212, 0.3);
-  background-image: url("/Images/me.jpg");
+  background-image: url("../Images/me.jpg");
   background-size: 120%;
   background-position:top;
   margin-right: 3rem;
