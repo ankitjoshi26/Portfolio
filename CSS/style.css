@@ -216,33 +216,36 @@
 }
 
 @media (max-width: 480px) {
+    #logo{
+        font-size: 1rem;
+    }
   .hero-container {
-        margin-top: 0.7rem;
+        margin-top: 2px;
     }
     #nav-list {
         gap: 8px;
     }
 
     .hero-text h1 {
-        font-size: 2rem;
+        font-size: 2.1rem;
     }
 
     .hero-text h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .hero-text p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .hero-img {
-        width: 160px;
-        height: 160px;
+        width: 220px;
+        height: 220px;
         background-size: cover;
         margin-right: 0;
     }
 
     #nav-list a {
-        font-size: 0.65rem;
+        font-size: 0.45rem;
     }
 }
