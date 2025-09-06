@@ -237,6 +237,70 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+/* skills */
+
+#skills {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0f172a;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#skills h2 {
+  color: #06b6d4;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+
+.skills-container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  background-color: #1e293b;
+  padding: 1rem;
+  width: 250px;
+  height: 200px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+
+.skill-card img {
+  width: 250px;
+  height: 150px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+
+.skill-card p {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(6, 182, 212, 0.5);
+}
+
 
 /* RESPONSIVE  */
 @media (max-width: 1024px) {
@@ -312,8 +376,8 @@
         font-size: 1rem;
     }
   .hero-container {
-        margin-top: 2px;
-        margin-bottom: 1rem;
+        margin-top: 1.8rem;
+        margin-bottom: 3rem;
     }
     #nav-list {
         gap: 6px;
@@ -416,7 +480,7 @@
 
 @media (max-width: 480px) {
   #about {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     gap: 1rem;
   }
 
