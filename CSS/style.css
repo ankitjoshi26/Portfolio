@@ -10,6 +10,7 @@ body {
   color: white;
   line-height: 1.6;
   min-height: 100vh;
+  padding-top: 5rem;
 }
 
 /* Navbar */
@@ -17,10 +18,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1.7rem;
   background-color: #0f172a;
-  position: sticky;
+  position: fixed;   
   top: 0;
+  left: 0;          
+  width: 100%;       
   z-index: 1000;
   border-bottom: 1px solid #1e293b;
 }
@@ -57,7 +60,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 3rem 4rem;
   min-height: 80vh;
   text-align: left;
   flex-wrap: wrap;
@@ -77,17 +80,18 @@ body {
 .hero-text {
   flex: 1 1 500px;
   color: white;
+  order: 1; /* desktop par text pehle */
 }
 
 .hero-text h1 {
   font-size: 3.5rem;
   font-weight: 900;
-  color: #06b6d4;
+  color: white;
   margin-bottom: 0.5rem;
 }
 
 .hero-text h1 span {
-  color: white;
+  color: #06b6d4;
 }
 
 .hero-text h2 {
@@ -120,17 +124,28 @@ button.resume {
 button.resume:hover,
 button.resume:focus {
   background-color: #0288a7;
+  color: white;
   outline: none;
   box-shadow: 0 6px 20px rgba(2, 136, 167, 0.6);
 }
 
-/* Hero image placeholder */
 .hero-img {
-  flex: 1 1 400px;
-  min-height: 300px;
-  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80') center center/cover no-repeat;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 2; 
+
+}
+
+.hero-img img {
+  width: 120%;            
+  max-width: 400px;         
+  aspect-ratio: 1/1;        
+  border-radius: 50%;       
+  object-fit: cover;        
+  object-position: top;     
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* About Section */
@@ -139,19 +154,27 @@ button.resume:focus {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem;
-  gap: 3rem;
+  padding: 3rem 3rem;
+  gap: 3.2rem;
   max-width: 1200px;
   margin: 0 auto 4rem auto;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .about-img {
-  flex: 1 1 350px;
-  min-height: 350px;
-  background: url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80') center center/cover no-repeat;
+  flex: 1 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img {
+  width: 370px;          
+  height: 410px;         
+  object-fit: cover;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .about-text {
@@ -167,9 +190,9 @@ button.resume:focus {
 }
 
 #about h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
+  color: rgb(184, 183, 183);
 }
 
 #about h2 span {
@@ -177,15 +200,15 @@ button.resume:focus {
 }
 
 #about h3 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 600;
-  margin-bottom: 1rem;
-  color: white;
+  margin-bottom: 0.7rem;
+  color: rgb(213, 198, 198);
 }
 
 #about p {
   font-size: 1.125rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   max-width: 600px;
   color: white;
 }
@@ -193,15 +216,16 @@ button.resume:focus {
 .social-text {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
   color: #06b6d4;
 }
 
 .social-icons a {
   color: white;
-  font-size: 2rem;
-  margin-right: 1.5rem;
+  font-size: 1.8rem;
+  margin-right: 0.8rem;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .social-icons a:hover,
@@ -235,7 +259,6 @@ button.resume:focus {
 .skill-card {
   background-color: #1e293b;
   border-radius: 15px;
-  padding: 1rem 1rem;
   width: 220px;
   box-shadow: 0 6px 15px rgba(6, 182, 212, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -251,10 +274,9 @@ button.resume:focus {
 }
 
 .skill-card img {
-  width: 180px;
-  height: 200px;
+  width: 220px;
+  height: 190px;
   object-fit: cover;
-  margin-bottom: 1rem;
 }
 
 .skill-card p {
@@ -266,7 +288,7 @@ button.resume:focus {
 /* Education Section */
 #education {
   padding: 4rem 2rem 6rem 2rem;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto 4rem auto;
   color: white;
 }
@@ -340,30 +362,39 @@ button.resume:focus {
 
 @media (max-width: 768px) {
   #navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: nowrap;   
+    padding: 0.8rem 1rem; 
+  }
+
+  #logo a {
+    font-size: 1.4rem; 
   }
 
   #nav-list {
-    margin-top: 0.5rem;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    margin-top: 0;       
+    width: auto;         
+    display: flex;       
+    gap: 0.6rem;         
   }
 
   #nav-list a {
-    margin-left: 0;
-    font-size: 0.9rem;
+    margin-left: 0;      
+    font-size: 0.8rem;  
+    font-weight: 600;
   }
+ 
 
   .hero {
     flex-direction: column;
     text-align: center;
   }
 
-  .hero-text, .hero-img {
-    flex: 1 1 100%;
+  .hero-img {
+    order: 1; 
+  }
+
+  .hero-text {
+    order: 2; 
   }
 
   .hero-text h1 {
@@ -374,9 +405,9 @@ button.resume:focus {
     font-size: 1.5rem;
   }
 
-  .about-img {
-    flex: 1 1 100%;
-    min-height: 250px;
+  .about-img img {
+    width: 300px;
+    height: 340px;
   }
 
   #about {
@@ -399,6 +430,20 @@ button.resume:focus {
 }
 
 @media (max-width: 480px) {
+ #logo a {
+    font-size: 1.2rem;   
+  }
+
+  #nav-list {
+    gap: 0.5rem;
+  }
+
+  #nav-list a {
+    font-size: 0.7rem;
+  }
+  .hero-img img {
+    max-width: 250px;  
+  }
   .hero-text h1 {
     font-size: 2rem;
   }
@@ -407,20 +452,44 @@ button.resume:focus {
     font-size: 1.25rem;
   }
 
+  .about-img img {
+    width: 250px;   
+    height: 280px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; /* thoda space cards ke beech */
+  }
+
+  .skill-card {
+    width: 100%; 
+    max-width: 160px;   
+    /* padding: 0.75rem; */
+  }
+
+  .skill-card img {
+    width: 100%;        
+    height: 100px;      
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-card p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+
   button.resume {
-    width: 100%;
+    width: 80%;
     padding: 1rem;
     font-size: 1.125rem;
   }
 
-  .skill-card {
-    width: 120px;
-    padding: 1rem 0.75rem;
-  }
-
-  .skill-card img {
-    width: 50px;
-    height: 50px;
+  .about-img img {
+    width: 250px;   
+    height: 280px;
   }
 
   #education h2 {
