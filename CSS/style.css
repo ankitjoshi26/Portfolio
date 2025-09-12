@@ -430,12 +430,15 @@ button.resume:focus {
 }
 
 @media (max-width: 480px) {
+ #navbar{
+    padding: 1 2rem;
+ }
  #logo a {
     font-size: 1.2rem;   
   }
 
   #nav-list {
-    gap: 0.5rem;
+    gap: 0.7rem;
   }
 
   #nav-list a {
