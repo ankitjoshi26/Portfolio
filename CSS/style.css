@@ -354,7 +354,7 @@ button.resume:focus {
 /* Responsiveness */
 @media (max-width: 1024px) {
   .hero {
-    padding: 3rem 1.5rem;
+    padding: 3rem 2rem;
   }
 
   .hero-text h1 {
@@ -409,6 +409,8 @@ button.resume:focus {
 
   .hero-img {
     order: 1; 
+    min-width: 350px;
+    min-height: 350px;
   }
 
   .hero-text {
