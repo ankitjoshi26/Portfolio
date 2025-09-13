@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.7rem;
+  padding: 1rem 2.2rem;
   background-color: #0f172a;
   position: fixed;   
   top: 0;
@@ -44,7 +44,7 @@ body {
 #nav-list a {
   color: white;
   text-decoration: none;
-  margin-left: 2rem;
+  margin-left: 1.8rem;
   font-weight: 600;
   font-size: 1rem;
   transition: color 0.3s ease;
@@ -68,7 +68,7 @@ body {
   min-height: 80vh;
   text-align: left;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .hero-container {
@@ -78,11 +78,11 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .hero-text {
-  flex: 1 1 500px;
+  flex: 1 1 330px;
   color: white;
   order: 1; /* desktop par text pehle */
 }
@@ -139,7 +139,7 @@ button.resume:focus {
   justify-content: center;
   align-items: center;
   order: 2; 
-
+  margin-right: auto;
 }
 
 .hero-img img {
@@ -198,7 +198,7 @@ button.resume:focus {
 }
 
 .abh1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 900;
   color: #06b6d4;
   margin-bottom: 1rem;
@@ -218,12 +218,12 @@ button.resume:focus {
   font-size: 1.7rem;
   font-weight: 600;
   margin-bottom: 0.7rem;
-  color: rgb(213, 198, 198);
+  color: rgb(209, 185, 185);
 }
 
 #about p {
   font-size: 1.125rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   max-width: 600px;
   color: white;
 }
@@ -261,7 +261,7 @@ button.resume:focus {
 }
 
 #skills h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 900;
   color: #06b6d4;
   margin-bottom: 3rem;
@@ -312,7 +312,7 @@ button.resume:focus {
 }
 
 #education h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 900;
   color: #06b6d4;
   margin-bottom: 3rem;
@@ -350,6 +350,139 @@ button.resume:focus {
 .edu-card strong {
   color: #06b6d4;
 }
+
+
+/* projects section */
+      
+#projects-container {
+  max-width: 1200px;
+  margin: 13px auto;
+  padding: 45px 20px;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.projects-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #06b6d4;
+  margin-bottom: 15px;
+}
+
+.projects-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 4 cards ek row me */
+  gap: 30px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.project-image {
+  height: 100px; 
+  overflow: hidden;
+  position: relative;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-content {
+  padding: 18px; 
+}
+
+.project-content h3 {
+  font-size: 1.2rem; 
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.project-content p {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 0.9rem; 
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.project-tag {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.project-link.main {
+  background: #3b82f6;
+  color: white;
+}
+
+.project-link.main:hover {
+  background: #2563eb;
+}
+
+.project-link.github {
+  color: #3b82f6;
+  border: 1px solid #e5e7eb;
+}
+
+.project-link.github:hover {
+  background: #f8fafc;
+  border-color: #3b82f6;
+}
+
+
 
 /* Responsiveness */
 @media (max-width: 1024px) {
@@ -447,6 +580,26 @@ button.resume:focus {
   #education {
     padding: 2rem 1rem 3rem 1rem;
   }
+  .projects-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  .project-card {
+    flex: 0 0 90%; 
+    scroll-snap-align: center; 
+  }
+
+  .projects-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .projects-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -465,7 +618,7 @@ button.resume:focus {
     font-size: 0.7rem;
   }
   .hero-img img {
-    max-width: 250px;  
+    max-width: 300px; 
   }
   .hero-text h1 {
     font-size: 2rem;
@@ -476,8 +629,8 @@ button.resume:focus {
   }
 
   .about-img img {
-    width: 250px;   
-    height: 280px;
+    min-width: 280px;   
+    min-height: 330px;
   }
 
   .skills-container {
@@ -521,4 +674,5 @@ button.resume:focus {
   .edu-card h3 {
     font-size: 1.5rem;
   }
+
 }
