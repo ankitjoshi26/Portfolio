@@ -43,9 +43,6 @@
 </section>
 
 
-      
-
-
   <div id="about">
   <div class="about-img">
     <img src="Images/me.jpg" alt="Ankit Joshi">
@@ -264,6 +261,81 @@
             </div>
     </section>
     
+
+  <section id="contact">
+    <h1 id="infotext">Contact Me</h1>
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Get In Touch</h1>
+            <p>Have a project in mind or want to collaborate? Feel free to reach out!</p>
+        </div>
+        
+        <div class="success-message" id="successMessage" aria-live="polite">
+            Thank you for your message! I'll get back to you as soon as possible.
+        </div>
+        
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Your Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter Full Name" required aria-describedby="nameError">
+                <div class="error-message" id="nameError">Please enter your name</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your mail" required aria-describedby="emailError">
+                <div class="error-message" id="emailError">Please enter a valid email address</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject <span class="required">*</span></label>
+                <input type="text" id="subject" name="subject" class="form-control" placeholder="Inquiry" required aria-describedby="subjectError">
+                <div class="error-message" id="subjectError">Please enter a subject</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Your Message <span class="required">*</span></label>
+                <textarea id="message" name="message" class="form-control" placeholder="Write your message..." required aria-describedby="messageError"></textarea>
+                <div class="error-message" id="messageError">Please enter your message</div>
+            </div>
+            
+            <div class="form-footer">
+                <button type="submit" class="btn">Send Message</button>
+            </div>
+        </form>
+    </div>
+  </section>
+    
+
+  <!-- Footer -->
+<footer id="footer">
+  <div class="footer-top">
+    <p>© 2025 Ankit Joshi. All Rights Reserved.</p>
+  </div>
+  <div class="footer-icons">
+      <a href="http://www.linkedin.com/in/ankitjoshiii" target="_blank"><i class="ri-linkedin-box-line"></i></a>
+      <a href="https://github.com/ankitjoshi26" target="_blank"><i class="ri-github-fill"></i></a>
+      <a href="https://x.com/AnkitJoshi9315" target="_blank"><i class="ri-twitter-x-line"></i></a>
+      <a href="https://www.instagram.com/ankyt_joshi/" target="_blank"><i class="ri-instagram-line"></i></a>
+      <a href="https://www.youtube.com/channel/UCqnFCk4Djh1VRObUV_Sjrug" target="_blank"><i class="ri-youtube-line"></i></a>
+    </div>
+</footer>
+
+
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "WB298260PpOvTjOUf",
+      });
+   })();
+</script>
+
+    <script src="./Script/script.js"></script>
+
 </body>
 </html>
 </body>
