@@ -780,7 +780,8 @@ textarea.form-control {
     font-size: 0.7rem;
   }
   .hero-img img {
-    max-width: 300px; 
+    max-width: 285px;
+    max-height: 285px;
   }
   .hero-text h1 {
     font-size: 2rem;
