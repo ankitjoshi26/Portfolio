@@ -29,13 +29,20 @@ body {
 }
 
 #logo a {
+  font-weight: bold;
+  color: #fff;
   font-size: 1.8rem;
-  font-weight: 600;
   color: #06b6d4;
   text-decoration: none;
   user-select: none;
 }
 
+#menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
 
 #logo a span {
   color: white;
@@ -134,17 +141,17 @@ button.resume:focus {
 }
 
 .hero-img {
-  flex: 1;
+  flex: 1 1;
   display: flex;
   justify-content: center;
   align-items: center;
   order: 2; 
-  margin-right: auto;
 }
 
 .hero-img img {
-  width: 120%;            
-  max-width: 400px;         
+  width: 400px;          
+  height: 400px;
+  /* max-width: 400px;          */
   aspect-ratio: 1/1;        
   border-radius: 50%;       
   object-fit: cover;        
@@ -159,14 +166,26 @@ button.resume:focus {
 
 /* About Section */
 #about {
+  padding: 3rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto 1rem auto;
+}
+
+.abh1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #06b6d4;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Flex container for image + text */
+.about-content {
   display: flex;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  padding: 3rem 3rem;
   gap: 3.2rem;
-  max-width: 1200px;
-  margin: 0 auto 1rem auto;
   flex-wrap: wrap;
   overflow: hidden;
 }
@@ -180,8 +199,9 @@ button.resume:focus {
 
 .about-img img {
   width: 370px;          
-  height: 410px;         
+  height: 400px;         
   object-fit: cover;
+  object-position: top;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
   transition: transform 0.4s ease, box-shadow 0.4s ease; 
@@ -195,13 +215,6 @@ button.resume:focus {
 .about-text {
   flex: 1 1 500px;
   color: white;
-}
-
-.abh1 {
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: #06b6d4;
-  margin-bottom: 1rem;
 }
 
 #about h2 {
@@ -249,6 +262,7 @@ button.resume:focus {
   color: #06b6d4;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
 }
+
 
 /* Skills Section */
 #skills {
@@ -356,7 +370,7 @@ button.resume:focus {
 #projects-container {
   max-width: 1200px;
   margin: 0 auto 1rem auto;
-  padding: 2.2rem 1.5rem; 
+  padding: 1.5rem 1.5rem; 
 }
 
 .projects-header {
@@ -673,19 +687,44 @@ textarea.form-control {
     font-size: 1.4rem; 
   }
 
+
   #nav-list {
-    margin-top: 0;       
-    width: auto;         
-    display: flex;       
-    gap: 0.6rem;         
+    display: none; 
+    flex-direction: column;
+    align-items: flex-start; 
+    padding: 80px 40px;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.97); 
+    gap: 25px;
+    font-size: 20px;
+    z-index: 999;
+    transition: transform 0.3s ease;
+  }
+
+  #nav-list.show {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
   }
 
   #nav-list a {
-    margin-left: 0;      
-    font-size: 0.8rem;  
-    font-weight: 600;
+    color: #f1f5f9;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s, transform 0.2s;
   }
- 
+
+  #nav-list a:hover {
+    color: #38bdf8;
+    transform: translateX(5px);
+  }
 
   .hero {
     flex-direction: column;
@@ -779,10 +818,39 @@ textarea.form-control {
   #nav-list a {
     font-size: 0.7rem;
   }
-  .hero-img img {
-    max-width: 285px;
-    max-height: 285px;
+
+   .hero {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
   }
+
+  .hero-container {
+    flex-direction: column;
+    align-items: center; /* center everything */
+    width: 100%;
+  }
+
+  .hero-img {
+    flex: 0 0 auto;      /* do not stretch */
+    width: 100%;         /* take full container width */
+    display: flex;
+    justify-content: center; /* center the image */
+    margin-bottom: 1rem;
+  }
+
+  .hero-img img {
+    width: 70vw;       /* relative to viewport */
+    min-width: 280px;  
+    height: auto;      
+    border-radius: 50%;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+
   .hero-text h1 {
     font-size: 2rem;
   }
@@ -791,10 +859,6 @@ textarea.form-control {
     font-size: 1.25rem;
   }
 
-  .about-img img {
-    min-width: 280px;   
-    min-height: 330px;
-  }
 
   .skills-container {
     grid-template-columns: repeat(2, 1fr);
@@ -837,5 +901,4 @@ textarea.form-control {
   .edu-card h3 {
     font-size: 1.5rem;
   }
-
 }

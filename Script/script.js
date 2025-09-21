@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // ===== NAVBAR TOGGLE =====
+    const menuToggle = document.getElementById("menu-toggle");
+    const navList = document.getElementById("nav-list");
+
+    if (menuToggle && navList) {
+        menuToggle.addEventListener("click", () => {
+            navList.classList.toggle("show");
+        });
+
+        // Close nav when clicking a link (mobile)
+        document.querySelectorAll("#nav-list a").forEach(link => {
+            link.addEventListener("click", () => navList.classList.remove("show"));
+        });
+    }
+
+    // ===== CONTACT FORM VALIDATION + EMAILJS =====
     const contactForm = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
     const submitButton = contactForm.querySelector('button[type="submit"]');
@@ -39,10 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (isValid) {
             submitButton.disabled = true;
 
-            // Send email using global emailjs object
             emailjs.send(
-                'service_6sec1go',   //service id
-                'template_xwbdchk',  //templete id
+                'service_6sec1go',   // service id
+                'template_xwbdchk', // template id
                 {
                     name: nameInput.value,
                     email: emailInput.value,
