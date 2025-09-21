@@ -166,7 +166,7 @@ button.resume:focus {
 
 /* About Section */
 #about {
-  padding: 3rem 3rem;
+  padding: 3rem;
   max-width: 1200px;
   margin: 0 auto 1rem auto;
 }
@@ -175,11 +175,10 @@ button.resume:focus {
   font-size: 2.5rem;
   font-weight: 900;
   color: #06b6d4;
-  margin-bottom: 1rem;
   text-align: center;
 }
 
-/* Flex container for image + text */
+
 .about-content {
   display: flex;
   min-height: 100vh;
@@ -218,20 +217,21 @@ button.resume:focus {
 }
 
 #about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.2rem;
+  font-size: 2.4rem;
+  margin-bottom: 0.1rem;
   color: rgb(184, 183, 183);
 }
 
 #about h2 span {
+  font-size: 2.6rem;
   color: #06b6d4;
 }
 
 #about h3 {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 0.7rem;
-  color: rgb(209, 185, 185);
+  margin-bottom: 0.4rem;
+  color: rgb(193, 165, 165);
 }
 
 #about p {
@@ -498,23 +498,26 @@ button.resume:focus {
 
 /* contact */
 
+#contact{
+  margin-top: 2rem;
+}
 .contact-container {
     max-width: 700px;      
-    margin: 40px auto;    
-    padding: 20px;           
+    margin: 30px auto;    
+    padding: 17px;           
     background: white;
-    border-radius: 10px;
+    border-radius: 9px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .contact-header {
     text-align: center;
-    margin-bottom: 20px;     
+    margin-bottom: 17px;     
 }
 
 #infotext {
     color: #06b6d4;
-    font-size: 2.2rem;       
+    font-size: 2rem;       
     font-weight: 700;
     text-align: center;
 }
@@ -628,20 +631,20 @@ textarea.form-control {
 }
 
 .footer-top {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.2rem;
 }
 
 .footer-bottom {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.1rem;
 }
 
 .footer-icons a{
   color: #06b6d4;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
@@ -649,6 +652,19 @@ textarea.form-control {
   color: white;
 }
 
+/* fly animation */
+
+.fly-in {
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: all 0.8s ease-out;
+}
+
+
+.fly-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Responsiveness */
 @media (max-width: 1024px) {
@@ -692,12 +708,12 @@ textarea.form-control {
     display: none; 
     flex-direction: column;
     align-items: flex-start; 
-    padding: 80px 40px;
+    padding: 60px 20px;
     position: fixed;
     inset: 0;
     background: rgba(15, 23, 42, 0.97); 
-    gap: 25px;
-    font-size: 20px;
+    gap: 30px;
+    font-size: 40px;
     z-index: 999;
     transition: transform 0.3s ease;
   }
@@ -708,7 +724,7 @@ textarea.form-control {
 
   #menu-toggle {
     display: block;
-    font-size: 30px;
+    font-size: 45px;
     color: #fff;
     cursor: pointer;
     z-index: 1000;
@@ -750,8 +766,8 @@ textarea.form-control {
   }
 
   .about-img img {
-    width: 300px;
-    height: 340px;
+    width: 320px;
+    height: 360px;
   }
 
   #about {
@@ -819,7 +835,7 @@ textarea.form-control {
     font-size: 0.7rem;
   }
 
-   .hero {
+  .hero {
     flex-direction: column;
     padding: 2rem 1rem;
     text-align: center;
@@ -827,21 +843,21 @@ textarea.form-control {
 
   .hero-container {
     flex-direction: column;
-    align-items: center; /* center everything */
+    align-items: center; 
     width: 100%;
   }
 
   .hero-img {
-    flex: 0 0 auto;      /* do not stretch */
-    width: 100%;         /* take full container width */
+    flex: 0 0 auto;     
+    width: 100%;         
     display: flex;
-    justify-content: center; /* center the image */
+    justify-content: center; 
     margin-bottom: 1rem;
   }
 
   .hero-img img {
-    width: 70vw;       /* relative to viewport */
-    min-width: 280px;  
+    width: 70vw;       
+    min-width: 300px;  
     height: auto;      
     border-radius: 50%;
   }
@@ -890,8 +906,8 @@ textarea.form-control {
   }
 
   .about-img img {
-    width: 250px;   
-    height: 280px;
+    width: 310px;   
+    height: 340px;
   }
 
   #education h2 {

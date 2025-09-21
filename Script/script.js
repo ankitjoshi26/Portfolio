@@ -84,4 +84,21 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+    // ===== SCROLL FLY-IN ANIMATION =====
+    const elementsToAnimate = document.querySelectorAll(".fly-in");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.2 } // 20% visible trigger
+    );
+
+    elementsToAnimate.forEach(el => observer.observe(el));
 });
