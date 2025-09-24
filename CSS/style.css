@@ -724,7 +724,7 @@ textarea.form-control {
 
   #menu-toggle {
     display: block;
-    font-size: 22px;
+    font-size: 1.3rem;
     color: #fff;
     cursor: pointer;
     z-index: 1000;
