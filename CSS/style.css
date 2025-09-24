@@ -39,7 +39,7 @@ body {
 
 #menu-toggle {
   display: none;
-  font-size: 28px;
+  font-size: 20px;
   color: #fff;
   cursor: pointer;
 }
@@ -724,7 +724,7 @@ textarea.form-control {
 
   #menu-toggle {
     display: block;
-    font-size: 45px;
+    font-size: 22px;
     color: #fff;
     cursor: pointer;
     z-index: 1000;
