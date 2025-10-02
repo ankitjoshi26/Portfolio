@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ===== CONTACT FORM VALIDATION + EMAILJS =====
+    // CONTACT FORM VALIDATION + EMAILJS 
     const contactForm = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
     const submitButton = contactForm.querySelector('button[type="submit"]');
