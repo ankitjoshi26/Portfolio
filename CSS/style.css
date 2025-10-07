@@ -641,7 +641,7 @@ textarea.form-control {
 }
 
 .footer-icons a{
-  color: #06b6d4;
+  color: silver;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
@@ -649,7 +649,7 @@ textarea.form-control {
 }
 
 .footer-icons a:hover {
-  color: white;
+  color: #06b6d4;
 }
 
 /* fly animation */
