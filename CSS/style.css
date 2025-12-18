@@ -197,7 +197,7 @@ button.resume:focus {
 }
 
 .about-img img {
-  width: 370px;          
+  width: 370px;    
   height: 400px;         
   object-fit: cover;
   object-position: top;
