@@ -831,7 +831,7 @@ textarea.form-control {
 
   .hero {
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 2rem 0rem 2rem 0rem;
     text-align: center;
   }
 
@@ -860,7 +860,6 @@ textarea.form-control {
     width: 100%;
   }
 
-
   .hero-text h1 {
     font-size: 2rem;
   }
@@ -868,7 +867,6 @@ textarea.form-control {
   .hero-text h2 {
     font-size: 1.25rem;
   }
-
 
   .skills-container {
     grid-template-columns: repeat(2, 1fr);
@@ -891,7 +889,6 @@ textarea.form-control {
     font-size: 0.9rem;
     text-align: center;
   }
-
 
   button.resume {
     width: 80%;
