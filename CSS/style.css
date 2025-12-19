@@ -151,7 +151,6 @@ button.resume:focus {
 .hero-img img {
   width: 400px;          
   height: 400px;
-  /* max-width: 400px;          */
   aspect-ratio: 1/1;        
   border-radius: 50%;       
   object-fit: cover;        
@@ -176,17 +175,13 @@ button.resume:focus {
   font-weight: 900;
   color: #06b6d4;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
-
 
 .about-content {
   display: flex;
-  min-height: 100vh;
   justify-content: center;
   align-items: center;
-  gap: 3.2rem;
-  flex-wrap: wrap;
-  overflow: hidden;
 }
 
 .about-img {
@@ -212,7 +207,6 @@ button.resume:focus {
 }
 
 .about-text {
-  flex: 1 1 500px;
   color: white;
 }
 
@@ -237,7 +231,6 @@ button.resume:focus {
 #about p {
   font-size: 1.125rem;
   margin-bottom: 1rem;
-  max-width: 600px;
   color: white;
 }
 
@@ -266,10 +259,11 @@ button.resume:focus {
 
 /* Skills Section */
 #skills {
-  padding: 2rem 1.5rem;
+  /* padding: 2rem 1.5rem; */
   max-width: 1200px;
   margin: 0 auto 2rem auto;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 #skills h2 {
@@ -370,7 +364,7 @@ button.resume:focus {
 #projects-container {
   max-width: 1200px;
   margin: 0 auto 1rem auto;
-  padding: 1.5rem 1.5rem; 
+  padding: 3rem 1.5rem; 
 }
 
 .projects-header {
@@ -669,7 +663,7 @@ textarea.form-control {
 /* Responsiveness */
 @media (max-width: 1024px) {
   .hero {
-    padding: 3rem 2rem;
+    padding: 2.8rem 2rem;
   }
 
   .hero-text h1 {
@@ -772,7 +766,7 @@ textarea.form-control {
 
   #about {
     flex-direction: column;
-    padding: 2rem 1rem;
+    /* padding: 2rem 1rem; */
   }
 
   .about-text {
