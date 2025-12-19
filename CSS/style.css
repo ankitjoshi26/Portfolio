@@ -141,7 +141,7 @@ button.resume:focus {
 }
 
 .hero-img {
-  flex: 1 1;
+  flex: 1 1;  
   display: flex;
   justify-content: center;
   align-items: center;
