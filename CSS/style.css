@@ -364,7 +364,7 @@ button.resume:focus {
 #projects-container {
   max-width: 1200px;
   margin: 0 auto 1rem auto;
-  padding: 3rem 1.5rem; 
+  padding: 1rem 1.5rem; 
 }
 
 .projects-header {
@@ -766,7 +766,7 @@ textarea.form-control {
 
   #about {
     flex-direction: column;
-    /* padding: 2rem 1rem; */
+    padding: 0.4rem 1rem;
   }
 
   .about-text {
